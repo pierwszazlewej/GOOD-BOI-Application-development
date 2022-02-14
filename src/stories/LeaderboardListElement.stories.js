@@ -7,4 +7,6 @@ export default {
 const Template = (args) => <LeaderboardListElement {...args} />;
 
 export const Leaderboard = Template.bind({});
-Leaderboard.args = {};
+Leaderboard.args = {
+  text: 'test',
+};
