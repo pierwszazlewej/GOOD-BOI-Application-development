@@ -2,6 +2,7 @@ import '../src/Styles/globalStyles';
 import '../src/index.css';
 
 // import { GlobalStyles } from '../src/Styles/globalStyles';
+import { ThemeProvider } from 'styled-components';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,11 +14,10 @@ export const parameters = {
   },
 };
 
-// export const decorators = [
-//   (Story) => (
-//     <>
-//       <GlobalStyles />
-//       <Story />
-//     </>
-//   ),
-// ];
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme="default">
+      <Story />
+    </ThemeProvider>
+  ),
+];
